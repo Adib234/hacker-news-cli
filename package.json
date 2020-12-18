@@ -1,20 +1,21 @@
 {
-	"name": "hackernews-cli",
-	"version": "1.0.0",
-	"description": "CLI utility to keep you updated on the latest buzz on Hackernews",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"main": "commands.js",
-	"bin": {
-		"hackernews-cli": "./bin/commands.js"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"axios": "^0.21.0",
-		"commander": "^6.2.1",
-		"lodash": "^4.17.20"
-	}
+  "name": "hackernews-cli",
+  "version": "1.0.0",
+  "description": "CLI utility to keep you updated on the latest buzz on Hackernews",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "commands.js",
+  "bin": {
+    "hackernews": "bin/commands.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "chalk": "^4.1.0",
+    "commander": "^6.2.1",
+    "lodash": "^4.17.20"
+  }
 }

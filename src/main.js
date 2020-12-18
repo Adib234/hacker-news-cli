@@ -1,5 +1,6 @@
 const axios = require("axios");
 const _ = require("lodash");
+const chalk = require("chalk");
 
 async function getTop() {
   try {
@@ -38,11 +39,32 @@ async function processResults() {
     console.log(error);
   }
 }
+
+function format(data) {
+  let sample = _.slice(data, 0, 10).map(({ time, ...article }) => article);
+  let count = 1;
+  for (const article of sample) {
+    const { title, url, score, dateTime, hourTime } = article;
+    console.log(
+      chalk.green.inverse(`${count}. ${title} (score: ${chalk.red(score)})`)
+    );
+    const string = "URL:";
+    console.log(
+      chalk.green(
+        `${chalk.yellow.inverse(string)} ${chalk.blue.underline.bold(url)}`
+      )
+    );
+    console.log(chalk.magenta.inverse(`Time: ${hourTime} ${dateTime}`));
+    console.log("\n");
+    count++;
+  }
+}
+
 async function sortByScore() {
   try {
     const data = await processResults();
     data.sort((a, b) => (b.score > a.score ? 1 : a.score > b.score ? -1 : 0));
-    console.log(_.slice(data, 0, 10).map(({ time, ...article }) => article));
+    format(data);
   } catch (error) {
     console.log(error);
   }
@@ -52,8 +74,7 @@ async function sortByTime() {
   try {
     const data = await processResults();
     data.sort((a, b) => (b.time > a.time ? 1 : a.time > b.time ? -1 : 0));
-
-    console.log(_.slice(data, 0, 10).map(({ time, ...article }) => article));
+    format(data);
   } catch (error) {
     console.log(error);
   }
