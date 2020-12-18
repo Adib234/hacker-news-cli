@@ -1,0 +1,429 @@
+Statistical profiling result from isolate-0x104e00000-56921-v8.log, (1728 ticks, 2 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     34    2.0%          /usr/lib/system/libsystem_malloc.dylib
+     15    0.9%          /usr/lib/system/libsystem_platform.dylib
+      7    0.4%          /usr/lib/system/libsystem_pthread.dylib
+      4    0.2%          /usr/lib/system/libsystem_kernel.dylib
+      3    0.2%          /usr/lib/system/libsystem_c.dylib
+      2    0.1%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.1%    0.1%  RegExp: ^((?:(?:[0-9a-fA-F]{1,4}):){7}(?:(?:[0-9a-fA-F]{1,4})|:)|(?:(?:[0-9a-fA-F]{1,4}):){6}(?:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|:(?:[0-9a-fA-F]{1,4})|:)|(?:(?:[0-9a-fA-F]{1,4}):){5}(?::((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,2}|:)|(?:(?:[0-9a-fA-F]{1,4}):){4}(?:(:(?:[0-9a-fA-F]{1,4})){0,1}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,3}|:)|(?:(?:[0-9a-fA-F]{1,4}):){3}(?:(:(?:[0-9a-fA-F]{1,4})){0,2}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,4}|:)|(?:(?:[0-9a-fA-F]{1,4}):){2}(?:(:(?:[0-9a-fA-F]{1,4})){0,3}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,5}|:)|(?:(?:[0-9a-fA-F]{1,4}):){1}(?:(:(?:[0-9a-fA-F]{1,4})){0,4}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,6}|:)|(?::((?::(?:[0-9a-fA-F]{1,4})){0,5}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(?::(?:[0-9a-fA-F]{1,4})){1,7}|:)))(%[0-9a-zA-Z-.:]{1,})?$
+      1    0.1%    0.1%  LazyCompile: *removeListener node:events:463:28
+      1    0.1%    0.1%  LazyCompile: *parse node:url:158:37
+      1    0.1%    0.1%  LazyCompile: *nextTick node:internal/process/task_queues:101:18
+      1    0.1%    0.1%  LazyCompile: *emit node:events:275:44
+      1    0.1%    0.1%  LazyCompile: *Readable.removeListener node:internal/streams/readable:883:45
+
+ [C++]:
+   ticks  total  nonlib   name
+    607   35.1%   36.5%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+    430   24.9%   25.9%  T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+    259   15.0%   15.6%  T __kernelrpc_thread_policy_set
+     49    2.8%    2.9%  T __ZN4node6crypto7TLSWrap5StartERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     41    2.4%    2.5%  T __ZN4node6crypto7TLSWrap10SetSessionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     28    1.6%    1.7%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     26    1.5%    1.6%  T __ZN4node6crypto13SecureContext4InitERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     24    1.4%    1.4%  T __ZN4node6crypto13SecureContext10SetCiphersERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     21    1.2%    1.3%  T __ZN4node7TCPWrap7ConnectERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     19    1.1%    1.1%  T __ZN4node6crypto7TLSWrap10DestroySSLERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     16    0.9%    1.0%  T _semaphore_create
+     12    0.7%    0.7%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     10    0.6%    0.6%  T __ZN4node6crypto7TLSWrap4WrapERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     10    0.6%    0.6%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     10    0.6%    0.6%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_8ShutdownERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      8    0.5%    0.5%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      6    0.3%    0.4%  T ___psynch_mutexwait
+      6    0.3%    0.4%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE4EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+      5    0.3%    0.3%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      4    0.2%    0.2%  t __ZN4node12_GLOBAL__N_16Parser7ExecuteERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      4    0.2%    0.2%  T __ZN4node6crypto13SecureContext15SetCipherSuitesERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.2%    0.2%  t __ZN4node6Buffer12_GLOBAL__N_111StringSliceILNS_8encodingE1EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      3    0.2%    0.2%  t __ZN4node10cares_wrap12_GLOBAL__N_111GetAddrInfoERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.2%    0.2%  T _task_policy_set
+      3    0.2%    0.2%  T _mach_vm_map
+      3    0.2%    0.2%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.2%    0.2%  T __ZN4node10HandleWrap5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.1%    0.1%  t __ZNSt3__112__hash_tableIN4node19CleanupHookCallbackENS2_4HashENS2_5EqualENS_9allocatorIS2_EEE4findIS2_EENS_15__hash_iteratorIPNS_11__hash_nodeIS2_PvEEEERKT_
+      2    0.1%    0.1%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.1%    0.1%  t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.1%    0.1%  t __ZN4node10cares_wrap12_GLOBAL__N_111ChannelWrap3NewERKN2v820FunctionCallbackInfoINS3_5ValueEEE
+      2    0.1%    0.1%  t __ZN2v88internal14LookupIteratorC2EPNS0_7IsolateENS0_6HandleINS0_6ObjectEEENS4_INS0_4NameEEEmNS4_INS0_10JSReceiverEEENS1_13ConfigurationE
+      2    0.1%    0.1%  t __ZN2v88internal12StringHasher20HashSequentialStringIhEEjPKT_iy
+      2    0.1%    0.1%  T _listxattr
+      2    0.1%    0.1%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.1%    0.1%  T __ZN4node7TCPWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.1%    0.1%  T __ZN4node6crypto13SecureContext5CloseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.1%    0.1%  t __pthread_cond_updateval
+      1    0.1%    0.1%  t __ZN4node9JSUDPWrap12GetAsyncWrapEv
+      1    0.1%    0.1%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.1%    0.1%  t __ZN4node12_GLOBAL__N_16ParserD1Ev
+      1    0.1%    0.1%  t __ZN4node10BaseObjectD2Ev
+      1    0.1%    0.1%  t __ZN4node10AsyncHooks17pop_async_contextEd
+      1    0.1%    0.1%  t __ZN2v88internal6String7FlattenEPNS0_7IsolateENS0_6HandleIS1_EENS0_14AllocationTypeE
+      1    0.1%    0.1%  t __ZN2v88internal12_GLOBAL__N_117InstantiateObjectEPNS0_7IsolateENS0_6HandleINS0_18ObjectTemplateInfoEEENS4_INS0_10JSReceiverEEEb
+      1    0.1%    0.1%  T _pthread_workqueue_setup
+      1    0.1%    0.1%  T _getattrlistbulk
+      1    0.1%    0.1%  T __kernelrpc_mach_vm_protect_trap
+      1    0.1%    0.1%  T ___workq_kernreturn
+      1    0.1%    0.1%  T ___getdirentries64
+      1    0.1%    0.1%  T __ZN4node9inspector5AgentC1EPNS_11EnvironmentE
+      1    0.1%    0.1%  T __ZN4node6errors13TryCatchScopeD2Ev
+      1    0.1%    0.1%  T __ZN4node6crypto7TLSWrap22GetALPNNegotiatedProtoERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.1%    0.1%  T __ZN4node6crypto7TLSWrap13SetServernameERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.1%    0.1%  T __ZN4node24NodeArrayBufferAllocator10ReallocateEPvmm
+      1    0.1%    0.1%  T __ZN4node10HandleWrap7OnCloseEP11uv_handle_s
+      1    0.1%    0.1%  T __ZN2v88internal21ObjectLiteralPropertyC1EPNS0_10ExpressionES3_NS1_4KindEb
+      1    0.1%    0.1%  T __ZN2v88TryCatchD2Ev
+
+ [Summary]:
+   ticks  total  nonlib   name
+      7    0.4%    0.4%  JavaScript
+   1654   95.7%   99.5%  C++
+     24    1.4%    1.4%  GC
+     65    3.8%          Shared libraries
+      2    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1315   99.7%   76.1%  T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      2    0.2%    0.1%  t __ZN4node12_GLOBAL__N_16Parser7ExecuteERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.1%    0.1%  t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.1%    0.1%  T __ZN4node6crypto15NativeKeyObject26CreateNativeKeyObjectClassERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    607   35.1%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+    607  100.0%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+    607  100.0%      LazyCompile: ~handleWriteReq node:internal/stream_base_commons:47:24
+    607  100.0%        LazyCompile: ~writeGeneric node:internal/stream_base_commons:149:22
+    607  100.0%          LazyCompile: ~Socket._writeGeneric node:net:738:42
+    607  100.0%            LazyCompile: ~Socket._write node:net:775:35
+
+    430   24.9%  T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+    127   29.5%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+     10    7.9%      T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      4   40.0%        LazyCompile: ~createSecureContext node:_tls_common:94:59
+      4  100.0%          LazyCompile: ~connect node:_tls_wrap:1556:35
+      4  100.0%            LazyCompile: ~createConnection node:https:97:26
+      1   10.0%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:264:21
+      1  100.0%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:295:26
+      1  100.0%            LazyCompile: ~trySelf node:internal/modules/cjs/loader:415:17
+      1   10.0%        LazyCompile: ~mergeConfig /Users/admin/hackernews-cli/node_modules/axios/lib/core/mergeConfig.js:13:38
+      1  100.0%          LazyCompile: ~request /Users/admin/hackernews-cli/node_modules/axios/lib/core/Axios.js:27:43
+      1  100.0%            LazyCompile: ~Axios.<computed> /Users/admin/hackernews-cli/node_modules/axios/lib/core/Axios.js:75:37
+      1   10.0%        LazyCompile: ~getOwn node:internal/bootstrap/loaders:150:16
+      1  100.0%          LazyCompile: ~syncExports node:internal/bootstrap/loaders:253:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:239:15
+      1   10.0%        LazyCompile: ~calculateServerName node:_http_agent:328:29
+      1  100.0%          LazyCompile: ~addRequest node:_http_agent:225:49
+      1  100.0%            LazyCompile: ~ClientRequest node:_http_client:89:23
+      1   10.0%        LazyCompile: ~ClientRequest node:_http_client:89:23
+      1  100.0%          LazyCompile: ~request node:https:280:17
+      1  100.0%            LazyCompile: ~RedirectableRequest._performRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:223:58
+      1   10.0%        Eval: ~<anonymous> /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:1438:31
+      1  100.0%          Eval: ~runInContext /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:1406:44
+      1  100.0%            Eval: ~<anonymous> /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:9:11
+      7    5.5%      LazyCompile: ~getName node:https:168:43
+      7  100.0%        LazyCompile: ~addRequest node:_http_agent:225:49
+      7  100.0%          LazyCompile: ~ClientRequest node:_http_client:89:23
+      7  100.0%            LazyCompile: ~request node:https:280:17
+      6    4.7%      LazyCompile: ~dispatchHttpRequest /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:21:50
+      6  100.0%        T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      6  100.0%          LazyCompile: ~httpAdapter /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:20:38
+      6  100.0%            LazyCompile: ~dispatchRequest /Users/admin/hackernews-cli/node_modules/axios/lib/core/dispatchRequest.js:23:42
+      4    3.1%      LazyCompile: ~nextTick node:internal/process/task_queues:101:18
+      2   50.0%        LazyCompile: ~TLSSocket node:_tls_wrap:446:19
+      2  100.0%          LazyCompile: ~connect node:_tls_wrap:1556:35
+      2  100.0%            LazyCompile: ~createConnection node:https:97:26
+      1   25.0%        LazyCompile: ~resume node:internal/streams/readable:954:16
+      1  100.0%          LazyCompile: ~Readable.resume node:internal/streams/readable:940:37
+      1  100.0%            LazyCompile: ~Readable.on node:internal/streams/readable:853:33
+      1   25.0%        LazyCompile: ~endReadable node:internal/streams/readable:1272:21
+      1  100.0%          LazyCompile: ~Readable.read node:internal/streams/readable:385:35
+      1  100.0%            LazyCompile: ~flow node:internal/streams/readable:985:14
+      4    3.1%      LazyCompile: ~addRequest node:_http_agent:225:49
+      4  100.0%        LazyCompile: ~ClientRequest node:_http_client:89:23
+      4  100.0%          LazyCompile: ~request node:https:280:17
+      4  100.0%            LazyCompile: ~RedirectableRequest._performRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:223:58
+      4    3.1%      LazyCompile: ~Socket node:net:271:16
+      4  100.0%        LazyCompile: ~TLSSocket node:_tls_wrap:446:19
+      4  100.0%          LazyCompile: ~connect node:_tls_wrap:1556:35
+      4  100.0%            LazyCompile: ~createConnection node:https:97:26
+      3    2.4%      LazyCompile: ~transformResponse /Users/admin/hackernews-cli/node_modules/axios/lib/defaults.js:57:49
+      3  100.0%        LazyCompile: ~transform /Users/admin/hackernews-cli/node_modules/axios/lib/core/transformData.js:15:40
+      3  100.0%          LazyCompile: *forEach /Users/admin/hackernews-cli/node_modules/axios/lib/utils.js:232:17
+      3  100.0%            LazyCompile: ~transformData /Users/admin/hackernews-cli/node_modules/axios/lib/core/transformData.js:13:40
+      3    2.4%      LazyCompile: ~request node:https:280:17
+      3  100.0%        LazyCompile: ~RedirectableRequest._performRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:223:58
+      3  100.0%          LazyCompile: ~RedirectableRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:36:29
+      3  100.0%            LazyCompile: ~request /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:403:21
+      3    2.4%      LazyCompile: ~getName node:_http_agent:203:43
+      3  100.0%        LazyCompile: ~getName node:https:168:43
+      3  100.0%          LazyCompile: ~addRequest node:_http_agent:225:49
+      3  100.0%            LazyCompile: ~ClientRequest node:_http_client:89:23
+      3    2.4%      LazyCompile: ~ClientRequest node:_http_client:89:23
+      3  100.0%        LazyCompile: ~request node:https:280:17
+      3  100.0%          LazyCompile: ~RedirectableRequest._performRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:223:58
+      3  100.0%            LazyCompile: ~RedirectableRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:36:29
+      3    2.4%      LazyCompile: ~<anonymous> /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:15744:38
+      3  100.0%        LazyCompile: ~arrayEach /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:511:21
+      3  100.0%          LazyCompile: ~mixin /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:15730:19
+      3  100.0%            Eval: ~runInContext /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:1406:44
+      3    2.4%      Eval: ~runInContext /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:1406:44
+      3  100.0%        Eval: ~<anonymous> /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:9:11
+      3  100.0%          Eval: ~<anonymous> /Users/admin/hackernews-cli/node_modules/lodash/lodash.js:1:1
+      3  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1037:37
+      2    1.6%      LazyCompile: ~urlParse node:url:150:18
+      2  100.0%        LazyCompile: ~dispatchHttpRequest /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:21:50
+      2  100.0%          T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      2  100.0%            LazyCompile: ~httpAdapter /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:20:38
+      2    1.6%      LazyCompile: ~internalConnect node:net:844:25
+      2  100.0%        LazyCompile: ~defaultTriggerAsyncIdScope node:internal/async_hooks:420:36
+      2  100.0%          LazyCompile: ~emitLookup node:net:1024:46
+      2  100.0%            LazyCompile: ~onlookup node:dns:65:18
+      2    1.6%      LazyCompile: ~Socket._final node:net:401:35
+      2  100.0%        LazyCompile: ~callFinal node:internal/streams/writable:648:19
+      2  100.0%          LazyCompile: ~prefinish node:internal/streams/writable:696:19
+      2  100.0%            LazyCompile: ~finishMaybe node:internal/streams/writable:708:21
+      2    1.6%      LazyCompile: *processTicksAndRejections node:internal/process/task_queues:65:35
+      2    1.6%      LazyCompile: *forEach /Users/admin/hackernews-cli/node_modules/axios/lib/utils.js:232:17
+      1   50.0%        LazyCompile: ~normalizeHeaderName /Users/admin/hackernews-cli/node_modules/axios/lib/helpers/normalizeHeaderName.js:5:46
+      1  100.0%          LazyCompile: ~transformRequest /Users/admin/hackernews-cli/node_modules/axios/lib/defaults.js:31:47
+      1  100.0%            LazyCompile: ~transform /Users/admin/hackernews-cli/node_modules/axios/lib/core/transformData.js:15:40
+      1   50.0%        LazyCompile: ~mergeConfig /Users/admin/hackernews-cli/node_modules/axios/lib/core/mergeConfig.js:13:38
+      1  100.0%          LazyCompile: ~Axios.<computed> /Users/admin/hackernews-cli/node_modules/axios/lib/core/Axios.js:75:37
+      1  100.0%            LazyCompile: ~wrap /Users/admin/hackernews-cli/node_modules/axios/lib/helpers/bind.js:4:23
+      2    1.6%      LazyCompile: *<anonymous> node:_tls_common:206:37
+      2  100.0%        T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      2  100.0%          LazyCompile: ~createSecureContext node:_tls_common:94:59
+      2  100.0%            LazyCompile: ~connect node:_tls_wrap:1556:35
+      9    2.1%    LazyCompile: ~_addListener node:events:355:22
+      4   44.4%      LazyCompile: ~addListener node:events:417:58
+      4  100.0%        LazyCompile: ~Readable.on node:internal/streams/readable:853:33
+      2   50.0%          LazyCompile: ~TLSSocket._init node:_tls_wrap:650:37
+      2  100.0%            LazyCompile: ~TLSSocket node:_tls_wrap:446:19
+      2   50.0%          LazyCompile: ~Socket node:net:271:16
+      2  100.0%            LazyCompile: ~TLSSocket node:_tls_wrap:446:19
+      4   44.4%      LazyCompile: *addListener node:events:417:58
+      4  100.0%        LazyCompile: ~Readable.on node:internal/streams/readable:853:33
+      2   50.0%          LazyCompile: ~handleResponse /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:179:65
+      1   50.0%            LazyCompile: ~emit node:events:275:44
+      1   50.0%            LazyCompile: *emit node:events:275:44
+      1   25.0%          LazyCompile: ~tickOnSocket node:_http_client:756:22
+      1  100.0%            LazyCompile: ~onSocketNT node:_http_client:822:20
+      1   25.0%          LazyCompile: ~parserOnIncomingClient node:_http_client:587:32
+      1  100.0%            LazyCompile: ~parserOnHeadersComplete node:_http_common:75:33
+      1   11.1%      LazyCompile: ~prependListener node:events:424:29
+      1  100.0%        LazyCompile: ~connect node:_tls_wrap:1556:35
+      1  100.0%          LazyCompile: ~createConnection node:https:97:26
+      1  100.0%            LazyCompile: ~createSocket node:_http_agent:296:53
+      8    1.9%    LazyCompile: ~emit node:events:275:44
+      3   37.5%      LazyCompile: ~_addListener node:events:355:22
+      2   66.7%        LazyCompile: ~addListener node:events:417:58
+      2  100.0%          LazyCompile: ~Readable.on node:internal/streams/readable:853:33
+      1   50.0%            LazyCompile: ~once node:events:446:44
+      1   50.0%            LazyCompile: ~connect node:_tls_wrap:1556:35
+      1   33.3%        LazyCompile: *addListener node:events:417:58
+      1  100.0%          LazyCompile: ~Readable.on node:internal/streams/readable:853:33
+      1  100.0%            LazyCompile: ~tickOnSocket node:_http_client:756:22
+      2   25.0%      LazyCompile: ~endReadableNT node:internal/streams/readable:1282:23
+      2  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:65:35
+      1   12.5%      LazyCompile: ~onFinish node:_http_outgoing:792:18
+      1  100.0%        LazyCompile: ~afterWrite node:internal/streams/writable:486:20
+      1  100.0%          LazyCompile: ~onwrite node:internal/streams/writable:424:17
+      1  100.0%            LazyCompile: ~onWriteComplete node:internal/stream_base_commons:82:25
+      1   12.5%      LazyCompile: ~afterConnect node:net:1091:22
+      1   12.5%      LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:906:43
+      1  100.0%        LazyCompile: ~ssl.onhandshakedone node:_tls_wrap:704:27
+      8    1.9%    LazyCompile: ~ClientRequest node:_http_client:89:23
+      8  100.0%      LazyCompile: ~request node:https:280:17
+      8  100.0%        LazyCompile: ~RedirectableRequest._performRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:223:58
+      8  100.0%          LazyCompile: ~RedirectableRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:36:29
+      8  100.0%            LazyCompile: ~request /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:403:21
+      6    1.4%    LazyCompile: ~nextTick node:internal/process/task_queues:101:18
+      2   33.3%      LazyCompile: ~onSocket node:_http_client:816:53
+      2  100.0%        LazyCompile: ~setRequestSocket node:_http_agent:491:26
+      2  100.0%          LazyCompile: ~<anonymous> node:_http_agent:274:37
+      2  100.0%            LazyCompile: ~<anonymous> node:_http_agent:310:25
+      1   16.7%      LazyCompile: ~maybeReadMore node:internal/streams/readable:589:23
+      1  100.0%        LazyCompile: ~addChunk node:internal/streams/readable:294:18
+      1  100.0%          LazyCompile: ~readableAddChunk node:internal/streams/readable:226:26
+      1  100.0%            LazyCompile: ~Readable.push node:internal/streams/readable:217:35
+      1   16.7%      LazyCompile: ~endReadable node:internal/streams/readable:1272:21
+      1  100.0%        LazyCompile: ~Readable.read node:internal/streams/readable:385:35
+      1  100.0%          LazyCompile: ~Socket.read node:net:608:33
+      1  100.0%            LazyCompile: ~flow node:internal/streams/readable:985:14
+      1   16.7%      LazyCompile: ~emitReadable node:internal/streams/readable:550:22
+      1  100.0%        LazyCompile: ~onEofChunk node:internal/streams/readable:520:20
+      1  100.0%          LazyCompile: ~readableAddChunk node:internal/streams/readable:226:26
+      1  100.0%            LazyCompile: ~Readable.push node:internal/streams/readable:217:35
+      1   16.7%      LazyCompile: ~TLSSocket node:_tls_wrap:446:19
+      1  100.0%        LazyCompile: ~connect node:_tls_wrap:1556:35
+      1  100.0%          LazyCompile: ~createConnection node:https:97:26
+      1  100.0%            LazyCompile: ~createSocket node:_http_agent:296:53
+      5    1.2%    LazyCompile: ~removeListener node:events:463:28
+      4   80.0%      LazyCompile: ~Readable.removeListener node:internal/streams/readable:883:45
+      2   50.0%        LazyCompile: ~onceWrapper node:events:428:21
+      2  100.0%          LazyCompile: ~emit node:events:275:44
+      2  100.0%            LazyCompile: ~afterConnect node:net:1091:22
+      2   50.0%        LazyCompile: ~onConnectSecure node:_tls_wrap:1483:25
+      2  100.0%          LazyCompile: ~emit node:events:275:44
+      2  100.0%            LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:906:43
+      1   20.0%      LazyCompile: ~onceWrapper node:events:428:21
+      1  100.0%        LazyCompile: ~emit node:events:275:44
+      1  100.0%          LazyCompile: ~parserOnIncomingClient node:_http_client:587:32
+      1  100.0%            LazyCompile: ~parserOnHeadersComplete node:_http_common:75:33
+      5    1.2%    LazyCompile: ~dispatchHttpRequest /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:21:50
+      5  100.0%      T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      5  100.0%        LazyCompile: ~httpAdapter /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:20:38
+      5  100.0%          LazyCompile: ~dispatchRequest /Users/admin/hackernews-cli/node_modules/axios/lib/core/dispatchRequest.js:23:42
+      5  100.0%            t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      5    1.2%    LazyCompile: ~ReadableState node:internal/streams/readable:72:23
+      5  100.0%      LazyCompile: ~Readable node:internal/streams/readable:175:18
+      3   60.0%        LazyCompile: ~IncomingMessage node:_http_incoming:42:25
+      3  100.0%          LazyCompile: ~parserOnHeadersComplete node:_http_common:75:33
+      3  100.0%            t __ZN4node12_GLOBAL__N_16Parser7ExecuteERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2   40.0%        LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      2  100.0%          LazyCompile: ~Socket node:net:271:16
+      2  100.0%            LazyCompile: ~TLSSocket node:_tls_wrap:446:19
+      5    1.2%    LazyCompile: ~Readable.read node:internal/streams/readable:385:35
+      5  100.0%      LazyCompile: ~Socket.read node:net:608:33
+      3   60.0%        LazyCompile: ~afterConnect node:net:1091:22
+      1   20.0%        LazyCompile: ~socketCloseListener node:_http_client:407:29
+      1  100.0%          LazyCompile: ~emit node:events:275:44
+      1  100.0%            LazyCompile: ~<anonymous> node:net:654:24
+      1   20.0%        LazyCompile: ~flow node:internal/streams/readable:985:14
+      1  100.0%          LazyCompile: ~resume_ node:internal/streams/readable:961:17
+      1  100.0%            LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:65:35
+
+    259   15.0%  T __kernelrpc_thread_policy_set
+
+     49    2.8%  T __ZN4node6crypto7TLSWrap5StartERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     49  100.0%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+     49  100.0%      LazyCompile: ~TLSSocket._start node:_tls_wrap:935:38
+     49  100.0%        LazyCompile: ~onceWrapper node:events:428:21
+     49  100.0%          LazyCompile: ~emit node:events:275:44
+     49  100.0%            LazyCompile: ~afterConnect node:net:1091:22
+
+     41    2.4%  T __ZN4node6crypto7TLSWrap10SetSessionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     41  100.0%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+     22   53.7%      LazyCompile: ~TLSSocket.setSession node:_tls_wrap:966:42
+     22  100.0%        LazyCompile: ~connect node:_tls_wrap:1556:35
+     22  100.0%          LazyCompile: ~createConnection node:https:97:26
+     22  100.0%            LazyCompile: ~createSocket node:_http_agent:296:53
+     19   46.3%      LazyCompile: ~TLSSocket._init node:_tls_wrap:650:37
+     19  100.0%        LazyCompile: ~TLSSocket node:_tls_wrap:446:19
+     19  100.0%          LazyCompile: ~connect node:_tls_wrap:1556:35
+     19  100.0%            LazyCompile: ~createConnection node:https:97:26
+
+     34    2.0%  /usr/lib/system/libsystem_malloc.dylib
+      8   23.5%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      2   25.0%      T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      1   50.0%        LazyCompile: ~dispatchHttpRequest /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:21:50
+      1  100.0%          T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      1  100.0%            LazyCompile: ~httpAdapter /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:20:38
+      1   50.0%        LazyCompile: ~Socket.connect node:net:906:36
+      1  100.0%          LazyCompile: ~connect node:_tls_wrap:1556:35
+      1  100.0%            LazyCompile: ~createConnection node:https:97:26
+      1   12.5%      LazyCompile: ~settle /Users/admin/hackernews-cli/node_modules/axios/lib/core/settle.js:12:33
+      1  100.0%        LazyCompile: ~handleStreamEnd /Users/admin/hackernews-cli/node_modules/axios/lib/adapters/http.js:234:50
+      1  100.0%          LazyCompile: ~emit node:events:275:44
+      1  100.0%            LazyCompile: ~endReadableNT node:internal/streams/readable:1282:23
+      1   12.5%      LazyCompile: ~removeSocket node:_http_agent:407:53
+      1  100.0%        LazyCompile: ~onClose node:_http_agent:366:19
+      1  100.0%          LazyCompile: ~emit node:events:275:44
+      1  100.0%            LazyCompile: ~<anonymous> node:net:654:24
+      1   12.5%      LazyCompile: ~getHighWaterMark node:internal/streams/state:19:26
+      1  100.0%        LazyCompile: ~ReadableState node:internal/streams/readable:72:23
+      1  100.0%          LazyCompile: ~Readable node:internal/streams/readable:175:18
+      1  100.0%            LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1   12.5%      LazyCompile: ~addRequest node:_http_agent:225:49
+      1  100.0%        LazyCompile: ~ClientRequest node:_http_client:89:23
+      1  100.0%          LazyCompile: ~request node:https:280:17
+      1  100.0%            LazyCompile: ~RedirectableRequest._performRequest /Users/admin/hackernews-cli/node_modules/follow-redirects/index.js:223:58
+      1   12.5%      LazyCompile: ~_parseCommand /Users/admin/hackernews-cli/node_modules/commander/index.js:963:16
+      1  100.0%        LazyCompile: ~parse /Users/admin/hackernews-cli/node_modules/commander/index.js:754:8
+      1  100.0%          Eval: ~<anonymous> /Users/admin/hackernews-cli/main.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1037:37
+      1   12.5%      LazyCompile: ~ReadableState node:internal/streams/readable:72:23
+      1  100.0%        LazyCompile: ~Readable node:internal/streams/readable:175:18
+      1  100.0%          LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%            LazyCompile: ~Socket node:net:271:16
+
+     28    1.6%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     28  100.0%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+     28  100.0%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+     27   96.4%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:298:29
+      3   11.1%          Eval: ~<anonymous> node:tls:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      3   11.1%          Eval: ~<anonymous> node:internal/child_process:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      3   11.1%          Eval: ~<anonymous> node:crypto:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      2    7.4%          Eval: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      2    7.4%          Eval: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      2    7.4%          Eval: ~<anonymous> node:http:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.7%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:222:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:20:36
+      1    3.7%          LazyCompile: ~lookupAndConnect node:net:965:26
+      1  100.0%            LazyCompile: ~Socket.connect node:net:906:36
+      1    3.7%          LazyCompile: ~initializeReport node:internal/bootstrap/pre_execution:177:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:20:36
+      1    3.7%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:411:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:20:36
+      1    3.7%          Eval: ~<anonymous> node:net:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.7%          Eval: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.7%          Eval: ~<anonymous> node:internal/modules/cjs/helpers:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.7%          Eval: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.7%          Eval: ~<anonymous> node:fs:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.7%          Eval: ~<anonymous> node:assert:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.7%          Eval: ~<anonymous> node:_http_common:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.7%          Eval: ~<anonymous> node:_http_client:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:265:27
+      1    3.6%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:214:25
+      1  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:31:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:724:24
+
+     26    1.5%  T __ZN4node6crypto13SecureContext4InitERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     26  100.0%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+     26  100.0%      LazyCompile: ~SecureContext node:_tls_common:60:23
+     26  100.0%        LazyCompile: ~createSecureContext node:_tls_common:94:59
+     26  100.0%          LazyCompile: ~connect node:_tls_wrap:1556:35
+     26  100.0%            LazyCompile: ~createConnection node:https:97:26
+
+     24    1.4%  T __ZN4node6crypto13SecureContext10SetCiphersERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     24  100.0%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+     24  100.0%      LazyCompile: ~createSecureContext node:_tls_common:94:59
+     24  100.0%        LazyCompile: ~connect node:_tls_wrap:1556:35
+     24  100.0%          LazyCompile: ~createConnection node:https:97:26
+     24  100.0%            LazyCompile: ~createSocket node:_http_agent:296:53
+
+     21    1.2%  T __ZN4node7TCPWrap7ConnectERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     21  100.0%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+     21  100.0%      LazyCompile: ~methodProxy node:_tls_wrap:535:30
+     21  100.0%        LazyCompile: ~internalConnect node:net:844:25
+     21  100.0%          LazyCompile: ~defaultTriggerAsyncIdScope node:internal/async_hooks:420:36
+     21  100.0%            LazyCompile: ~emitLookup node:net:1024:46
+
+     19    1.1%  T __ZN4node6crypto7TLSWrap10DestroySSLERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     19  100.0%    T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+     19  100.0%      LazyCompile: ~done node:_tls_wrap:554:16
+
