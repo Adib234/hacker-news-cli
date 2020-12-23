@@ -1,6 +1,9 @@
 const axios = require("axios");
 const _ = require("lodash");
 const chalk = require("chalk");
+const cliProgress = require("cli-progress");
+
+const bar1 = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
 
 async function getTop() {
   try {
@@ -79,5 +82,6 @@ async function sortByTime() {
     console.log(error);
   }
 }
+sortByScore();
 
 module.exports = { sortByTime, sortByScore };

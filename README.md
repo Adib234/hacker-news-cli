@@ -1,3 +1,29 @@
+# Intro
+
+This project was inspired by my desire to have something that was a small CLI tool that I can use while I was on my 17 minute Pomodoro break. If anything goes wrong while you use it, please make a pull request and I get back to you as soon as possible.
+
+# Installation
+
+To get started run
+
+```
+docker build -t <your username>/hackernews-cli .
+docker images # to get the tag name
+docker run <your username>/hackernews-cli:<tag name>
+```
+
+# Usage
+
+First of all, these are the following ways to get help
+
+```
+
+$ hackernews
+$ hackernews -h
+$ hackernews --help
+
+```
+
 # New things I learned
 
 - Use `Promise.all` on an iterable like array or map instead of doing things sequentially which boosted my performance in this case by 60x
@@ -9,4 +35,10 @@
 
 # To Do
 
-- Sort the top 10 articles by date
+- publish to npm
+- update readme.md on usage
+- autocomplete? progress bar?
+
+```
+
+```
