@@ -1,7 +1,7 @@
 FROM node:12
 
 # Create app directory
-WORKDIR /Users/admin/hackernews-cli
+WORKDIR /usr/hackernews-cli
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
