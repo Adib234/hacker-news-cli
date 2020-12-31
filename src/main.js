@@ -79,5 +79,8 @@ async function sortByTime() {
     console.log(error);
   }
 }
+function sum(a, b) {
+  return a + b;
+}
 
-module.exports = { sortByTime, sortByScore };
+module.exports = { sortByTime, sortByScore, getTop, processResults };
