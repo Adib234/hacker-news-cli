@@ -2,26 +2,14 @@
 
 This project was inspired by my desire to have something that was a small CLI tool that I can use while I was on my 17 minute Pomodoro break. If anything goes wrong while you use it, please make a pull request and I get back to you as soon as possible.
 
-# Installation
-
-To get started run
-
-```
-docker build -t <your username>/hackernews-cli .
-docker images # to get the tag name
-docker run <your username>/hackernews-cli:<tag name>
-```
-
 # Usage
 
 First of all, these are the following ways to get help
 
 ```
-
 $ hackernews
 $ hackernews -h
 $ hackernews --help
-
 ```
 
 # New things I learned
@@ -35,10 +23,10 @@ $ hackernews --help
 
 # To Do
 
-- publish to npm
-- update readme.md on usage
-- autocomplete? progress bar?
-
-```
-
-```
+- Implement a search engine
+- Figure out how to make use of flags
+- We might want to use Redis if ElasticSearch is not as fast to cache results
+- Some useful links if we go choose Redis
+  - https://static.simonwillison.net/static/2010/redis-tutorial/
+  - https://redis.io/topics/data-types-intro
+  - https://stackoverflow.com/questions/7535184/when-to-use-a-key-value-store-such-as-redis-instead-along-side-of-a-sql-database#:~:text=Since%20redis%20is%20rather%20memory,versatility%20to%20many%20other%20scenarios.
