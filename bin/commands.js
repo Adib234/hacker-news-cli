@@ -2,6 +2,8 @@
 const program = require("commander");
 const _ = require("lodash");
 const { sortByTime, sortByScore } = require("../src/main");
+const { run } = require("../src/search");
+const readline = require("readline");
 
 program
   .name("hackernews")
@@ -33,5 +35,24 @@ program
     }
   )
   .action(sortByTime);
+
+program
+  .command("search")
+  .alias("s")
+  .description(
+    "Searches from a list of stories including ask stories, best stories, newest ones and more"
+  )
+  .action(function search() {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    rl.question("search:", (answer) => {
+      run(answer);
+
+      rl.close();
+    });
+  });
 
 program.parse(process.argv);

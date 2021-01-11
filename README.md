@@ -1,3 +1,10 @@
+# Demo
+
+![Top score demo](https://media.giphy.com/media/rz6xMnyu96wGBAtExu/giphy.gif)
+
+![Search demo](https://media.giphy.com/media/eC5vwo9I6cFEFtjEdD/giphy.gif)
+Sorry this is low quality because I tried it in high quality and the upload would keep on failing
+
 # Intro
 
 This project was inspired by my desire to have something that was a small CLI tool that I can use while I was on my 17 minute Pomodoro break. If anything goes wrong while you use it, please make a pull request and I get back to you as soon as possible.
@@ -12,6 +19,10 @@ $ hackernews -h
 $ hackernews --help
 ```
 
+You can check the newest articles as well as the highest scoring new articles. Theres also search but that takes more than 5 seconds unfortunately.
+
+If you clone this repo, remember to install Elasticsearch and Kibana (if you want access to Dev Tools). Then in your terminal run `elasticsearch` to run an instance of Elasticsearch
+
 # New things I learned
 
 - Use `Promise.all` on an iterable like array or map instead of doing things sequentially which boosted my performance in this case by 60x
@@ -23,12 +34,4 @@ $ hackernews --help
 - Something really cool I did was when I was trying to search for examples for using the Node.js client for Elasticsearch, the filenames was this big string with a bunch of random numbers and letters. So what I did was I cloned the repo and the did `grep [whatever command I'm interested in seeing an example of] *` and just like that I found the examples! I love Unix <3
 - I really wanted to have all the stories available on my Elasticsearch index but 26 million is a big number for Javascript, I kept on getting the error `heap ran out of memory`, so then I tried 1500 but that was an ugly number for hackernews, so now I use only about 500
 - I was getting this weird error `cannot read property of undefined` and the quickest fix is to put a ? for every property except the last one. ? or also known as the null propagation operator/optional chaining operator is a way of short circuiting in an object if the property is null or undefined and making it equal to or returning undefined.
-
-# To Do
-
-- Implement a search engine
-- Figure out how to make use of flags
-- Some useful links if we go choose Redis
-  - https://static.simonwillison.net/static/2010/redis-tutorial/
-  - https://redis.io/topics/data-types-intro
-  - https://stackoverflow.com/questions/7535184/when-to-use-a-key-value-store-such-as-redis-instead-along-side-of-a-sql-database#:~:text=Since%20redis%20is%20rather%20memory,versatility%20to%20many%20other%20scenarios.
+- To get Elasticsearch setup make sure that you have elasticsearch running on your local machine and if you want access to the Dev Tools then you have to run kibana as well
