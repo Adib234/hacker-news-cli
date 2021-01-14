@@ -35,3 +35,8 @@ If you clone this repo, remember to install Elasticsearch and Kibana (if you wan
 - I really wanted to have all the stories available on my Elasticsearch index but 26 million is a big number for Javascript, I kept on getting the error `heap ran out of memory`, so then I tried 1500 but that was an ugly number for hackernews, so now I use only about 500
 - I was getting this weird error `cannot read property of undefined` and the quickest fix is to put a ? for every property except the last one. ? or also known as the null propagation operator/optional chaining operator is a way of short circuiting in an object if the property is null or undefined and making it equal to or returning undefined.
 - To get Elasticsearch setup make sure that you have elasticsearch running on your local machine and if you want access to the Dev Tools then you have to run kibana as well
+
+# Things I should've done
+
+- I remember concatenating two arrays and I just could've done that with the spread operator. The spread operator can do many things which array functions can do. The solution that I should've provided was something like `let i=[...i,...k]`
+- For the Elasticsearch database I should've set up a way to dump snapshots to Amazon S3 so that it could return to the previous state it was in and this would make it more resilient and to increase fault tolerance
