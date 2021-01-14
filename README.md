@@ -40,3 +40,4 @@ If you clone this repo, remember to install Elasticsearch and Kibana (if you wan
 
 - I remember concatenating two arrays and I just could've done that with the spread operator. The spread operator can do many things which array functions can do. The solution that I should've provided was something like `let i=[...i,...k]`
 - For the Elasticsearch database I should've set up a way to dump snapshots to Amazon S3 so that it could return to the previous state it was in and this would make it more resilient and to increase fault tolerance
+- I should've maybe used `Promise.all` again when I made multiple axios calls since the asynchronous code over there didn't rely on each other
